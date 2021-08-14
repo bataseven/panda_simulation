@@ -34,3 +34,5 @@ To run the simulation enter the command:
 ```
 roslaunch panda_simulation simulation.launch
 ```
+## Simulation in action
+![Pick & Place](https://github.com/bataseven/panda_simulation/blob/master/assets/simulation.gif?raw=true)

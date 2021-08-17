@@ -34,7 +34,7 @@ To run the simulation enter the command:
 ```
 roslaunch panda_simulation simulation.launch
 ```
-Run the demo by running the node in a seperate thread
+Start the demo by running the node in a seperate thread
 ```
 rosrun panda_simulation grasping_demo.py
 ```

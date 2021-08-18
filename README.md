@@ -19,6 +19,7 @@ cd catkin_ws/src
 git clone https://github.com/bataseven/panda_simulation.git
 git clone https://github.com/bataseven/panda_moveit_config.git
 git clone --branch simulation https://github.com/bataseven/franka_ros.git
+git clone https://github.com/pal-robotics/gazebo_ros_link_attacher.git
 cd ..
 sudo apt-get install libboost-filesystem-dev
 rosdep install --from-paths src --ignore-src -y --skip-keys libfranka

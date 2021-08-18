@@ -23,7 +23,7 @@ git clone https://github.com/pal-robotics/gazebo_ros_link_attacher.git
 cd ..
 sudo apt-get install libboost-filesystem-dev
 rosdep install --from-paths src --ignore-src -y --skip-keys libfranka
-cd ..
+catkin_make
 ```
 After building the workspace, source the *setup.bash*. To avoid sourcing it whenever a new terminal opens, add it to the *bashrc*. If the workspace is located in the $HOME folder, run the following command:
 ```

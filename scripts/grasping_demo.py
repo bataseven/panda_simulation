@@ -67,8 +67,8 @@ def main():
     rospy.init_node('grasping_demo')
     arm_group_name = "panda_arm"
     arm_group = moveit_commander.MoveGroupCommander(arm_group_name)
-    print(arm_group.get_current_rpy())
-    print(arm_group.get_current_pose())
+    # print(arm_group.get_current_rpy())
+    # print(arm_group.get_current_pose())
     link_attacher = LinkAttacher()
     gripper = Gripper()
     

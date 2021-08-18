@@ -1,5 +1,5 @@
 <launch>
-    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find franka_description)/robots/panda_arm_hand.urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro $(find franka_description)/robots/panda_arm_hand.urdf.xacro" />
 
     <!-- GAZEBO arguments -->
     <arg name="paused" default="false" />
@@ -22,7 +22,8 @@
         
     </include>
 
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model panda" />
+    <!-- No need to spawn the urdf as it is already defined in the sim_worl d-->
+    <!--node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model panda" /-->
 
     <!-- Load joint controller configurations from YAML file to parameter server -->
     <rosparam file="$(find panda_simulation)/config/panda_control.yaml" command="load" />
@@ -56,7 +57,7 @@
     <node pkg="controller_manager" type="spawner" name="joint_position_launcher" args="--stopped joint_position_controller" />
 
     <!-- run custom node for automatic intialization -->
-    <node pkg="panda_simulation" type="robot_state_initializer_node" name="robot_state_initializer_node" />
+    <!--node pkg="panda_simulation" type="robot_state_initializer_node" name="robot_state_initializer_node" /-->
 
     <!-- for web interface >
     <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">

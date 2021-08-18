@@ -8,7 +8,7 @@ This repository contains the necessary packages to perform a simple pick and pla
 ## How to get started
 Install the necessary ROS packages of Panda robot:
 ```
-sudo apt install ros-kinetic-libfranka ros-kinetic-franka-ros
+sudo apt install ros-noetic-libfranka ros-noetic-franka-ros
 ```
 
 Run the following commands to create the workspace and install additional packages:
